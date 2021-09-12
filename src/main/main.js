@@ -1,5 +1,4 @@
 const axios = require('axios').default;
-require('dotenv').config()
 
 const url = 'https://www.wrike.com/api/v4'
 const config = {
@@ -7,16 +6,16 @@ const config = {
 };
 
 axios.get(`${url}/folders`, config)
-    .then(function (response) {
+    .then(response => {
         console.log(response.data);
     })
-    .catch(function (error) {
+    .catch(error => {
         console.log(error);
 });
 
 axios.get(`${url}/account`, config)
-    .then(function (response) {
+    .then(response => {
         console.log(response.data);
-    }).catch(function (error) {
+    }).catch(error => {
         console.log(error);
     })
